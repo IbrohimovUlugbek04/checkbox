@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.box {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.checkbox-form__label {
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+}
+
+.checkbox-form__input {
+  display: none;
+}
+
+.checkbox-form__input:checked~.checkbox-form__box {
+  background-image: url("https://img.freepik.com/premium-photo/astronaut-spaceman-spacewalk-while-working-space-station_31965-33943.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px 50px;
+
+}
+
+.checkbox-form__input:checked+.checkbox-form__box::before {
+  left: 55px;
+  background-color: #fff;
+}
+
+.checkbox-form__box {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  width: 100px;
+  height: 50px;
+  background-image: url("http://pngimg.com/uploads/sun/sun_PNG13429.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100px 50px;
+  border: 2px solid #222;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.checkbox-form__box::before {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: #222;
+  border-radius: 50%;
+  content: "";
+  transition: left 0.3s ease;
+}
